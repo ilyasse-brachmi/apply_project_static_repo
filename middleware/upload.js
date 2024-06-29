@@ -26,7 +26,7 @@ var upload = multer({
     }
     else{
       console.log("only jpg & png & pdf files supported !");
-      callback(null, false)
+      callback(new Error('Only .png, .jpg, .jpeg, and .pdf files are supported'), false)
     }
   },
   limits: {
